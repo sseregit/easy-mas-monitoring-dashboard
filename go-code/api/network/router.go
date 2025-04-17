@@ -18,7 +18,7 @@ func newRouter(n *Network) {
 	n.Router(GET, "/send-for-panic", s.sendForPanic)
 	n.Router(GET, "/receive-for-error", s.receiveForError)
 
-	n.Router(GET, "/send-for-baggage", nil)
-	n.Router(GET, "/receive-for-baggage", nil)
+	n.Router(GET, "/send-for-baggage", s.sendForBaggage)
+	n.Router(GET, "/receive-for-baggage", s.receiveBaggage)
 
 }
