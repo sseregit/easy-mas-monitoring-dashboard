@@ -1,7 +1,9 @@
 package main
 
-import "go-code/jaeger"
+import (
+	"go-code/api"
+)
 
 func main() {
-	jaeger.NewClient("my-haeger")
+	api.NewApp("my-jaeger")
 }
