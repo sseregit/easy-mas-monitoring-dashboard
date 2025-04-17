@@ -8,7 +8,7 @@ func newRouter(n *Network) {
 	s := &Router{n}
 
 	n.Router(GET, "/send", s.send)
-	n.Router(GET, "/send-with-tage", s.sendWithTag)
+	n.Router(GET, "/send-with-tag", s.sendWithTag)
 	n.Router(GET, "/send-with-child", s.sendWithChild)
 
 	n.Router(GET, "/receive-from-other-host", nil)
