@@ -20,7 +20,6 @@ func NewProvider(service string) (io.Closer, error) {
 			//LocalAgentHostPort: "localhost:6820",
 		},
 	}
-
 	if tracer, closer, err := setting.NewTracer(config.Logger(log.StdLogger)); err != nil {
 		return nil, err
 	} else {

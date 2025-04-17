@@ -7,9 +7,9 @@ type Router struct {
 func newRouter(n *Network) {
 	s := &Router{n}
 
-	n.Router(GET, "/send", nil)
-	n.Router(GET, "/send-with-tage", nil)
-	n.Router(GET, "/send-with-child", nil)
+	n.Router(GET, "/send", s.send)
+	n.Router(GET, "/send-with-tage", s.sendWithTag)
+	n.Router(GET, "/send-with-child", s.sendWithChild)
 
 	n.Router(GET, "/receive-from-other-host", nil)
 	n.Router(GET, "/send-other-host", nil)

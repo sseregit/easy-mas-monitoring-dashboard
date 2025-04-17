@@ -13,6 +13,8 @@ type Network struct {
 func NewNetwork(client *jaeger.Client) *Network {
 	n := &Network{client: client, engin: gin.New()}
 
+	newRouter(n)
+
 	return n
 }
 
