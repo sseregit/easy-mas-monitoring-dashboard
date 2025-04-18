@@ -13,5 +13,8 @@
     "jaeger-client": "^3.19.0",
     "opentracing": "^0.14.7",
     "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/jaeger-client": "^3.18.7"
   }
 }
