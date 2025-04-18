@@ -2,3 +2,5 @@
 *.iml
 
 /go-code/*.sum
+
+/typescript-code/node_modules
