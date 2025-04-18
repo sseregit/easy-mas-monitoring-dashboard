@@ -1,16 +1,20 @@
 import * as opentracing from "opentracing";
 import * as jaeger from "jaeger-client";
-import {SamplerConfig, TracingOptions} from "jaeger-client";
 
 const initTracer = function (serviceName: string) {
-    const cfg : jaeger.TracingConfig = {
+    const cfg: jaeger.TracingConfig = {
         serviceName: serviceName,
-        // sampler: {},
-        reporter: {},
+        sampler: {
+            type: "const",
+            param: 1,
+        },
+        reporter: {
+            logSpans: true,
+        },
     };
 
-    const opt : jaeger.TracingOptions = {
-        logger : {
+    const opt: jaeger.TracingOptions = {
+        logger: {
             info: function logInfo(msg: string) {
                 console.log("INFO : ", msg);
             },
